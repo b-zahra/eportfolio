@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflection on Research Methods and Professional Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #222;
+        }
+
+        header {
+            background: #005f73;
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            margin: 60px auto;
+            background: white;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #005f73;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            color: #0a9396;
+            border-bottom: 2px solid #94d2bd;
+            padding-bottom: 0.3em;
+        }
+
+        h3 {
+            color: #005f73;
+            margin-top: 1.5em;
+        }
+
+        /* --- NAVIGATOR STYLING --- */
+        .navigator {
+            position: fixed;
+            top: 0;
+            right: -230px;
+            height: 100vh;
+            width: 200px;
+            background: #ffffff;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+            padding: 1.5em 1em;
+            border-radius: 12px 0 0 12px;
+            transition: right 0.4s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .navigator.open {
+            right: 0;
+        }
+
+        .navigator strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #005f73;
+        }
+
+        .navigator a {
+            display: block;
+            color: #005f73;
+            text-decoration: none;
+            padding: 6px 0;
+            transition: 0.2s;
+        }
+
+        .navigator a:hover {
+            color: #0a9396;
+            text-decoration: underline;
+        }
+
+        /* --- TOGGLE BUTTON --- */
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #005f73;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+
+        .nav-toggle:hover {
+            background: #0a9396;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 2em;
+            background: #005f73;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0a9396;
+        }
+
+        .author-info {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #555;
+        }
+
+        .reflection-section {
+            margin-bottom: 2em;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5em;
+            margin: 1.5em 0;
+        }
+
+        .swot-category {
+            background: #f8f9fa;
+            padding: 1em;
+            border-radius: 8px;
+            border-left: 4px solid #0a9396;
+        }
+
+        .swot-category h4 {
+            margin-top: 0;
+            color: #005f73;
+        }
+
+        .timeline-plan {
+            background: #f0f8ff;
+            padding: 1.5em;
+            border-radius: 8px;
+            margin: 1.5em 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            margin: 1.5em 0;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1em;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Reflection on Research Methods and Professional Practice</h1>
+        <p>Zahra Ballaith | Student ID: 28241</p>
+    </header>
+
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <div class="navigator" id="navigator">
+        <strong>Jump to Section</strong>
+        <a href="#what">WHAT: Module Context</a>
+        <a href="#so-what">SO WHAT: Critical Reflection</a>
+        <a href="#now-what">NOW WHAT: Growth and Application</a>
+        <a href="#conclusion">Conclusion</a>
+        <a href="#references">References</a>
+    </div>
+
+    <div class="container">
+        <section id="what" class="reflection-section">
+            <h2>WHAT: Module Context and Learning Journey</h2>
+            <p>
+                Throughout this Research Methods and Professional Practice module, I engaged with a
+                comprehensive exploration of research methodologies, professional ethics, and practical data
+                analysis techniques. The module required me to navigate multiple interconnected components:
+                two collaborative discussions on ethics and information accuracy, reflective activities on
+                generative AI governance and survey misuse, a literature review followed by a research
+                proposal. It also included some statistical worksheets covering hypothesis testing, summary
+                measures, inference, and data visualisation.
+            </p>
+            <p>
+                My chosen research area focused on the responsible adoption of LLMs in e-business contexts,
+                specifically examining how organisations can balance innovation-driven value creation with
+                robust governance frameworks. This topic emerged from my interest in understanding how
+                emerging technologies reshape digital commerce while raising profound ethical, legal, and social
+                questions. The literature review synthesised evidence from 2018-2025, critically evaluating both
+                optimistic perspectives that celebrate LLMs' transformative potential and cautious viewpoints
+                highlighting risks of bias, hallucinations, and regulatory uncertainty. The research proposal
+                extended this work by proposing an exploratory qualitative study using systematic review,
+                comparative case studies, and semi-structured interviews to develop a "Balanced Adoption
+                Framework" linking business KPIs to governance mechanisms.
+            </p>
+            <p>
+                Beyond the research assignments, the statistical components introduced me to descriptive and
+                inferential statistics, hypothesis testing, probability distributions, and data visualisation
+                principles. Working through the Excel-based worksheets forced me to move from theoretical
+                understanding to practical application, interpreting real datasets and translating statistical outputs
+                into meaningful business insights.
+            </p>
+        </section>
+
+        <section id="so-what" class="reflection-section">
+            <h2>SO WHAT: Critical Reflection and Analysis</h2>
+
+            <h3>Statistical Analysis and Research Competencies</h3>
+            <p>
+                My relationship with quantitative methods evolved significantly during this module. Initially, I
+                approached statistics with apprehension, viewing it as a purely technical exercise disconnected
+                from real-world decision making. However, as I worked through the hypothesis testing and
+                summary measures worksheets, I began to appreciate statistics as a language for evidence-based
+                reasoning. Calculating confidence intervals, conducting t-tests, and interpreting p-values became
+                less about mechanical computation and more about understanding what the data could, and could
+                not, tell me about the phenomena under investigation.
+            </p>
+            <p>
+                The inference worksheet particularly challenged me to think critically about validity and
+                generalisability. When analysing correlation coefficients or regression outputs, I had to
+                constantly question: "What assumptions underpin this analysis? What biases might exist in this
+                dataset? Can these findings reasonably extend beyond this specific sample?" This critical stance
+                was reinforced by the module's emphasis on ethical data collection and the Cambridge Analytica
+                case study, which demonstrated how statistical power divorced from ethical responsibility can
+                cause profound societal harm.
+            </p>
+            <p>
+                Creating visualisations also taught me that charts are not neutral representations but rhetorical
+                devices that can clarify or obscure truth. I initially included a pie chart in my Power BI work
+                (referenced in my previous data visualisation reflection), only to realise it masked important
+                trends that a stacked bar chart revealed more effectively. This experience carried into the charts
+                worksheet, where I had to justify not only what to visualise but why a particular chart type best
+                served the analytical question. I learned that good data presentation requires understanding your
+                audience, anticipating misinterpretation, and prioritising clarity over aesthetic appeal.
+            </p>
+
+            <h3>Research Methodology and the Literature Review</h3>
+            <p>
+                Conducting the literature review on LLMs in e-business was simultaneously intellectually
+                rewarding and methodologically challenging. The systematic search process, defining inclusion
+                criteria, executing Boolean searches across multiple databases, screening titles and abstracts, and
+                synthesising findings thematically, demanded rigour and patience. I initially underestimated the
+                volume of literature and the difficulty of maintaining focus. With too many potentially relevant
+                sources identified, I had to make difficult decisions about scope, ultimately excluding purely
+                technical papers and non-peer-reviewed content to maintain academic integrity.
+            </p>
+            <p>
+                The critical comparison section of my review revealed a fundamental tension in the literature:
+                optimistic studies emphasised efficiency gains and customer engagement, while cautious
+                perspectives foregrounded bias, unreliability, and regulatory risk. Importantly, I recognised that
+                these contradictions were not merely academic disagreements but reflected methodological
+                differences, short-term case studies versus longitudinal impact assessments, retail contexts versus
+                high-stakes healthcare applications, technical benchmarks versus organisational ethnographies.
+                This realisation taught me that research findings are always situated within specific contexts, and
+                that my role as a researcher is not to declare a single "truth" but to transparently acknowledge
+                complexity and contingency.
+            </p>
+
+            <h3>Professional Ethics in the Age of Generative AI</h3>
+            <p>
+                The module's ethical components, particularly Reflective Activity 1 on generative AI governance
+                and the collaborative discussions, profoundly shaped my understanding of professional
+                responsibility. The Correa et al. (2023) reading on global AI governance highlighted the
+                fragmentation of regulatory approaches: Europe's risk-based legislation, America's market-driven
+                flexibility, and Asia's hybrid frameworks. This diversity underscored that "responsible AI" is not
+                a universal standard but a contested, culturally situated concept.
+            </p>
+            <p>
+                Deckard's (2023) notion of "algorithmic fiduciary duty" particularly resonated with me. The idea
+                that computing professionals should bear a duty of care analogous to doctors or lawyers elevates
+                technical work from craft to profession. It means that my responsibility extends beyond writing
+                efficient code or building accurate models, I must actively prevent harm, ensure fairness, and
+                remain transparent about system limitations. This framing transformed how I approached my
+                research proposal: governance mechanisms were not bureaucratic obstacles but constitutive
+                elements of sustainable innovation.
+            </p>
+            <p>
+                The Cambridge Analytica case study provided a visceral illustration of ethical failure. Here was
+                a seemingly innocent personality quiz weaponised for mass psychological manipulation,
+                demonstrating how weak consent, unclear purpose, and profit motives can corrupt legitimate
+                research into exploitation. The case reinforced three principles that will guide my future practice:
+                never disguise data collection intent, minimise data collection (especially about third parties),
+                and separate research from commercial repurposing without renewed consent.
+            </p>
+
+            <h3>Personal and Emotional Dimensions of Learning</h3>
+            <p>
+                Emotionally, this module was a journey from uncertainty to cautious confidence. In the early
+                units, I felt overwhelmed by the sheer breadth of research methods, qualitative versus
+                quantitative, exploratory versus descriptive, inductive versus deductive. I worried about choosing
+                the "wrong" methodology for my literature review and research proposal. The first collaborative
+                discussion on ethics also challenged me intellectually; synthesising complex arguments from
+                Floridi, Leslie, and Dwivedi while integrating peer feedback required me to engage with
+                academic debate at a deeper level than I had previously experienced.
+            </p>
+            <p>
+                The statistical worksheets provoked frustration initially, particularly when Excel formulas failed
+                or when I struggled to interpret ANOVA outputs. However, learning that statistics is about
+                telling a story with data, not just calculating numbers, shifted my perspective. I began to see
+                errors not as personal failures but as learning opportunities, and I developed resilience in
+                troubleshooting problems and seeking help.
+            </p>
+            <p>
+                The most satisfying moment came when completing my research proposal presentation. After
+                weeks of reading, synthesising, and critically evaluating literature, I finally articulated a coherent
+                research question and methodology. Creating the Gantt chart and operationalising abstract
+                concepts like "thematic analysis" and "triangulation" into concrete research activities gave me a
+                sense of agency, I was no longer passively consuming knowledge but actively designing an
+                investigation that could generate new insights.
+            </p>
+        </section>
+
+        <section id="now-what" class="reflection-section">
+            <h2>NOW WHAT: Growth, Application, and Future Directions</h2>
+
+            <h3>Professional Skills Development and SWOT Analysis</h3>
+            <p>
+                Reflecting on my learning journey through this module, I recognise significant professional
+                growth across multiple dimensions. To structure this analysis, I conducted a SWOT assessment:
+            </p>
+
+            <div class="swot-grid">
+                <div class="swot-category">
+                    <h4>Strengths</h4>
+                    <ul>
+                        <li><strong>Critical Analytical Thinking:</strong> I can now evaluate academic literature with
+                            discernment,
+                            identifying methodological limitations, comparing contradictory findings, and synthesising
+                            evidence from diverse sources.</li>
+                        <li><strong>Research Design Competence:</strong> I understand how to formulate research
+                            questions, select
+                            appropriate methodologies, design data collection instruments, and plan analysis strategies.
+                        </li>
+                        <li><strong>Ethical Awareness:</strong> I possess a heightened sensitivity to the ethical
+                            dimensions of data use,
+                            particularly regarding consent, privacy, bias, and transparency.</li>
+                        <li><strong>Statistical Literacy:</strong> While not an expert statistician, I can now interpret
+                            common statistical outputs, recognise
+                            appropriate applications of different tests, and communicate data-driven insights to
+                            non-technical
+                            stakeholders.</li>
+                    </ul>
+                </div>
+
+                <div class="swot-category">
+                    <h4>Weaknesses</h4>
+                    <ul>
+                        <li><strong>Advanced Statistical Techniques:</strong> My understanding remains limited to
+                            descriptive
+                            statistics and basic inferential tests.</li>
+                        <li><strong>Qualitative Data Analysis:</strong> While I proposed qualitative methods in my
+                            research proposal, I
+                            have not yet conducted actual interviews, coded transcripts, or navigated the interpretive
+                            challenges of thematic analysis.</li>
+                        <li><strong>Time Management:</strong> I occasionally underestimated the time required for
+                            complex tasks like
+                            the literature review, leading to compressed timelines for writing and revision.</li>
+                        <li><strong>Intellectual Confidence:</strong> I sometimes deferred excessively to published
+                            authorities rather than trusting my own analytical
+                            voice.</li>
+                    </ul>
+                </div>
+
+                <div class="swot-category">
+                    <h4>Opportunities</h4>
+                    <ul>
+                        <li><strong>Capstone Project Application:</strong> The methodological skills and ethical
+                            frameworks
+                            developed in this module directly support my upcoming MSc project.</li>
+                        <li><strong>Industry Certification:</strong> The module reading introduced me to certifications
+                            like the BCS
+                            Practitioner Certificate in Data Protection and the Certified AI Ethics Specialist.</li>
+                        <li><strong>Interdisciplinary Collaboration:</strong> Understanding both technical and social
+                            dimensions of AI
+                            positions me to bridge disciplinary divides.</li>
+                        <li><strong>Policy Contribution:</strong> By staying current with AI governance debates and
+                            responsible innovation frameworks, I can
+                            contribute to shaping organisational policies, industry standards, and public discourse
+                            around
+                            emerging technologies.</li>
+                    </ul>
+                </div>
+
+                <div class="swot-category">
+                    <h4>Threats</h4>
+                    <ul>
+                        <li><strong>Rapid Technological Change:</strong> The AI field evolves faster than academic
+                            literature or
+                            regulatory frameworks can adapt.</li>
+                        <li><strong>Regulatory Complexity:</strong> As jurisdictions implement divergent AI regulations,
+                            navigating compliance will become
+                            increasingly complex.</li>
+                        <li><strong>Ethical Complacency:</strong> There is a risk that ethical principles remain
+                            abstract commitments
+                            rather than embedded practices.</li>
+                        <li><strong>Imposter Syndrome:</strong> As I transition from student to professional researcher,
+                            I may struggle with confidence in my
+                            expertise.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Short-Medium Term Plan (Next 6-12 Months)</h3>
+            <div class="timeline-plan">
+                <ol>
+                    <li><strong>Enroll in Advanced Statistics Course:</strong> Complete an online course in multivariate
+                        analysis
+                        or machine learning evaluation metrics to deepen quantitative skills.</li>
+                    <li><strong>Conduct Practice Interviews:</strong> Volunteer for a qualitative research project or
+                        conduct
+                        informational interviews with AI practitioners to build interview and coding skills.</li>
+                    <li><strong>Develop Professional Portfolio:</strong> Create a public-facing portfolio showcasing my
+                        research,
+                        statistical analyses, and ethical frameworks, using GitHub Pages or a personal website.</li>
+                    <li><strong>Pursue BCS Certification:</strong> Begin preparation for the BCS Practitioner
+                        Certificate in Data
+                        Protection or a related credential to formalize governance expertise.</li>
+                    <li><strong>Publish Findings:</strong> Target a practitioner-oriented publication to translate
+                        academic insights into actionable
+                        guidance for managers.</li>
+                </ol>
+            </div>
+
+            <h3>Long-Term (1-3 Years / Post-Graduation)</h3>
+            <div class="timeline-plan">
+                <ol>
+                    <li><strong>Contribute to Standards Development:</strong> Engage with organisations like ISO, IEEE,
+                        or
+                        industry consortia developing AI standards and best practices.</li>
+                    <li><strong>Mentor and Educate:</strong> Share knowledge through teaching, workshop facilitation, or
+                        mentoring junior professionals entering the field.</li>
+                    <li><strong>Continuous Learning:</strong> Commit to reading at least two academic papers and one
+                        industry
+                        report monthly, attending annual conferences, and participating in professional
+                        development activities.</li>
+                </ol>
+            </div>
+
+            <h3>Lessons and Skills Developed</h3>
+            <p>
+                The skills and insights developed in this module have immediate applicability across multiple
+                professional contexts:
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Critical Evaluation</h4>
+                    <ul>
+                        <li>I can now critically evaluate AI vendor claims, distinguishing substantiated benefits from
+                            marketing hyperbole.</li>
+                        <li>I can design and conduct organisational research to assess customer needs, evaluate system
+                            performance, or compare competing technologies using appropriate methodologies.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Governance and Policy</h4>
+                    <ul>
+                        <li>I understand how to structure governance frameworks that balance innovation with
+                            accountability.</li>
+                        <li>I can contribute to policy discussions by articulating the practical challenges of
+                            implementing
+                            ethical principles.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Communication and Collaboration</h4>
+                    <ul>
+                        <li>I can structure arguments systematically, synthesise diverse perspectives, and cite evidence
+                            rigorously.</li>
+                        <li>I can communicate complex technical concepts to non-specialist audiences through effective
+                            data visualisation and clear prose.</li>
+                        <li>I can translate between technical and ethical vocabularies, facilitating dialogue between
+                            data
+                            scientists, legal teams, business leaders, and civil society stakeholders.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="reflection-section">
+            <h2>Conclusion</h2>
+            <p>
+                This Research Methods and Professional Practice module has been transformative, equipping me
+                with methodological competencies, ethical frameworks, and critical perspectives essential for
+                navigating the complex landscape of AI-driven digital business. From grappling with statistical
+                hypothesis tests to synthesising fragmented literatures, from designing research proposals to
+                reflecting on fiduciary duties, I have developed a robust foundation for both academic
+                scholarship and professional practice.
+            </p>
+            <p>
+                The journey was not always comfortable, uncertainty, frustration, and self-doubt were frequent
+                companions. But discomfort is the precondition for growth, and I now approach challenges with
+                greater resilience and reflexivity. I recognise that expertise is not a destination but a continuous
+                process of learning, unlearning, and relearning in response to new evidence and changing
+                contexts.
+            </p>
+            <p>
+                Looking forward, I am excited to apply these skills in my capstone project, where I will design
+                and implement a substantial research artefact that integrates technical innovation with ethical
+                governance. Beyond graduation, I envision a career at the intersection of technology, ethics, and
+                policy, contributing to the responsible development and deployment of AI systems that enhance
+                human flourishing while respecting autonomy, fairness, and dignity.
+            </p>
+            <p>
+                This module has taught me that data is only as powerful as its presentation, that methodology is
+                only as valuable as its ethical grounding, and that innovation is only as sustainable as the trust it
+                cultivates. These lessons will guide my practice as I transition from student to professional, from
+                consumer of knowledge to contributor to collective understanding, from technologist to
+                responsible steward of transformative technologies.
+            </p>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <ul>
+                <li>Association for Computing Machinery (2018) ACM Code of Ethics and Professional
+                    Conduct. Available at: https://www.acm.org/code-of-ethics</li>
+                <li>Braun, V. and Clarke, V. (2006) 'Using thematic analysis in psychology', Qualitative
+                    Research in Psychology, 3(2), pp. 77-101.</li>
+                <li>British Computer Society (n.d.) Code of Conduct. Available at:
+                    https://www.bcs.org/membership/become-a-member/bcs-code-of-conduct/</li>
+                <li>Correa, C. et al. (2023) 'Global AI Governance and the Challenge of Normative Consensus',
+                    Journal of AI Policy and Ethics.</li>
+                <li>Deckard, T. (2023) 'The Fiduciary Turn in Generative AI Ethics', AI & Society, 38(4), pp.
+                    1021-1034.</li>
+                <li>Floridi, L. and Cowls, J. (2022) 'A Unified Framework for AI Governance', AI & Society.</li>
+                <li>Leslie, D. (2020) Understanding Artificial Intelligence Ethics and Safety. London: Alan
+                    Turing Institute.</li>
+                <li>Saunders, M., Lewis, P. and Thornhill, A. (2023) Research Methods for Business Students.
+                    9th edn. Harlow: Pearson.</li>
+                <li>Tranfield, D., Denyer, D. and Smart, P. (2003) 'Towards a Methodology for Developing
+                    Evidence-Informed Management Knowledge by Means of Systematic Review', British
+                    Journal of Management, 14(3), pp. 207-222.</li>
+                <li>Yin, R.K. (2018) Case Study Research and Applications: Design and Methods. 6th edn.
+                    Thousand Oaks, CA: Sage.</li>
+            </ul>
+        </section>
+
+        <a href="../../index.html#/rmpp" class="back-btn">← Back to RMPP</a>
+    </div>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navigatorPanel = document.getElementById('navigator');
+
+        navToggle.addEventListener('click', () => {
+            navigatorPanel.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

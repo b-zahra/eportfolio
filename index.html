@@ -6,6 +6,58 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Zahra B. — E-Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+        /* --- MODAL --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 600px;
+            width: 90%;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: slideIn 0.4s ease;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close:hover {
+            color: #0a9396;
+        }
+    </style>
 </head>
 
 <body>
@@ -151,7 +203,7 @@
                         <div class="muted small">Visualising Data</div>
                     </div><span class="badge lock">Private</span>
                 </li>
-                <li style="cursor:pointer" onclick="navigateTo('/rmpp')">
+                <li style="cursor:pointer" onclick="navigateTo('#rmpp')">
                     <div><strong>RMPP_PCOM7E</strong>
                         <div class="muted small">Research Methods and Professional Practice</div>
                     </div><span class="badge public">Public</span>
@@ -163,43 +215,246 @@
             <div class="breadcrumbs">Home &gt; Academia &gt; RMPP_PCOM7E</div>
             <h2>RMPP — Research Methods and Professional Practice</h2>
 
-            <h3>Module Contents</h3>
-            <ul class="file-list" style="margin-top:10px">
-                <li><strong>Statistical & Ethics Exercises</strong>
-                    <ul style="margin-top:8px">
-                        <li><a href="rmpp/exercises/activity1.pdf" target="_blank" rel="noopener" download>Activity 1 —
-                                Reflection (PDF)</a></li>
-                        <li><a href="rmpp/exercises/activity2.pdf" target="_blank" rel="noopener" download>Activity 2 —
-                                Ethics Exercise (PDF)</a></li>
-                        <li><a href="rmpp/exercises/activity3.pdf" target="_blank" rel="noopener" download>Activity 3</a></li>
-                        <li><a href="rmpp/exercises/activity4.pdf" target="_blank" rel="noopener" download>Activity 4</a></li>
-                    </ul>
+            <ul class="file-list">
+                <li>
+                    <strong>Reflective Activity 1 — Ethics in Computing </strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/activity1.pdf" download class="button">Download</a>
+                        <a href="rmpp/preview/activity1.html" class="button secondary">Preview</a>
+                    </div>
                 </li>
-
-                <li style="margin-top:12px"><strong>Literature Review</strong>
-                    <div class="muted small">The Impact of LLMs in E-Business</div>
-                    <div style="margin-top:8px"><a href="rmpp/The_Impact_of_LLMs_in_E-Business.pdf" target="_blank"
-                            rel="noopener" download>Download Literature Review (PDF)</a></div>
-                </li>
-
-                <li style="margin-top:12px"><strong>Research Proposal</strong>
-                    <div class="muted small">Uploaded as PDF and PPT<br><strong>Note:</strong> All references are
-                        included within the document (APA 7th format).</div>
-                    <div style="margin-top:8px">
-                        <a href="rmpp/Research Proposal - Zahra B.pdf" target="_blank" rel="noopener" download>Download
-                            Proposal (PDF)</a> •
-                        <a href="rmpp/Research Proposal - Presentation - Zahra B.pptx" target="_blank" rel="noopener"
-                            download>Download Proposal (PPTX)</a>
+                <li>
+                    <strong>Reflective Activity 2 — Case Study: Inappropriate Use of Surveys</strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/activity2.pdf" download class="button">Download</a>
+                        <a href="rmpp/preview/activity2.html" class="button secondary">Preview</a>
                     </div>
                 </li>
 
-                <li id="reflection" style="margin-top:12px"><strong>Reflection (End of Module)</strong>
-                    <div style="margin-top:8px"><a href="rmpp/reflection.pdf" target="_blank" rel="noopener"
-                            download>Download Reflection (PDF)</a></div>
+
+                <h1>Statistical Exercises</h1>
+                <li>
+                    <strong>Exercise 1</strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/EX 9.4.xlsx" download class="button">Download</a>
+                        <button class="button secondary" onclick="openModal('answer1')">Answer</button>
+                    </div>
+                </li>
+
+                <!-- Modal -->
+                <div id="answer1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('answer1')">&times;</span>
+                        <h3>Exercise 1 – Answer</h3>
+                        <p><strong>Step 1: State the Hypotheses</strong><br>
+                            H₀: μ<sub>A</sub> = μ<sub>B</sub> (The mean weight loss is the same for both diets)<br>
+                            H₁: μ<sub>A</sub> ≠ μ<sub>B</sub> (The mean weight loss differs between diets)</p>
+
+                        <p><strong>Step 2: Set Decision Criteria</strong><br>
+                            α = 0.05</p>
+
+                        <p><strong>Step 3: Compute Test Statistic</strong><br>
+                            From the data:<br>
+                            Diet A: n=50, Mean=5.876, SD=2.287<br>
+                            Diet B: n=50, Mean=3.742, SD=2.532<br>
+                            Using Excel’s <em>Data Analysis → t-Test: Two-Sample Assuming Unequal Variances</em>:<br>
+                            t-statistic = 4.416<br>
+                            df = 96<br>
+                            p-value = 0.000025</p>
+
+                        <p><strong>Step 4: Make Decision</strong><br>
+                            Since p-value (0.000025) < α (0.05), we <strong>REJECT</strong> the null hypothesis.<br>
+                                There is strong evidence that the mean weight loss differs significantly between Diet A
+                                and Diet B.<br>
+                                <strong>Diet A</strong> shows greater weight loss (5.876 kg) compared to <strong>Diet
+                                    B</strong> (3.742 kg).</p>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>Exercise 2</strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/Exe 9.2E.xlsx" download class="button">Download</a>
+                        <button class="button secondary" onclick="openModal('answer2')">Answer</button>
+                    </div>
+                </li>
+
+                <!-- Modal -->
+                <div id="answer2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('answer2')">&times;</span>
+                        <h3>Exercise 2 – Answer</h3>
+                        <p><strong>Step 1: State the Hypotheses</strong><br>
+                            H₀: The distributions of weight loss are the same for both diets<br>
+                            H₁: The distributions of weight loss differ between diets</p>
+
+                        <p><strong>Step 2: Set Decision Criteria</strong><br>
+                            α = 0.05</p>
+
+                        <p><strong>Step 3: Compute Test Statistic</strong><br>
+                            From the data:<br>
+                            Diet A: Median=5.861, Q1=4.007, Q3=7.265, IQR=3.258<br>
+                            Diet B: Median=3.840, Q1=1.757, Q3=5.123, IQR=3.366<br>
+                            Using Excel’s <em>Data Analysis → t-Test: Two-Sample Assuming Unequal Variances</em>:<br>
+                            t-statistic = 4.416<br>
+                            df = 96<br>
+                            p-value = 0.000025</p>
+
+                        <p><strong>Step 4: Make Decision</strong><br>
+                            The medians and quartiles show clear differences between diets. Diet A has higher central
+                            tendency across all measures.<br>
+                            The descriptive statistics support the t-test results from File 1, showing Diet A produces
+                            better weight loss outcomes.
+                        </p>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>Exercise 3</strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/Exe 9.1D.xlsx" download class="button">Download</a>
+                        <button class="button secondary" onclick="openModal('answer3')">Answer</button>
+                    </div>
+                </li>
+
+                <!-- Modal -->
+                <div id="answer3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('answer3')">&times;</span>
+                        <h3>Exercise 3 – Answer</h3>
+                        <p><strong>Step 1: State the Hypotheses</strong><br>
+                            H₀: There is no association between Area and Brand Preference<br>
+                            H₁: There is an association between Area and Brand Preference</p>
+
+                        <p><strong>Step 2: Set Decision Criteria</strong><br>
+                            α = 0.05</p>
+
+                        <p><strong>Step 3: Compute Test Statistic</strong><br>
+                            Chi-square test results: <br>
+                            • χ² = 2.894 <br>
+                            • df = 2 <br>
+                            • p-value = 0.235
+
+
+
+                        <p><strong>Step 4: Make Decision</strong><br>
+                            Since p-value (0.235) > α (0.05), we FAIL TO REJECT the null hypothesis. <br>
+                            There is no significant evidence of an association between geographic area and brand
+                            preference.
+
+                        </p>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>Exercise 4</strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/EX 9.6 .xlsx" download class="button">Download</a>
+                        <button class="button secondary" onclick="openModal('answer4')">Answer</button>
+                    </div>
+                </li>
+
+                <!-- Modal -->
+                <div id="answer4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('answer4')">&times;</span>
+                        <h3>Exercise 4 – Answer</h3>
+                        <p><strong>Step 1: State the Hypotheses</strong><br>
+                            H₀: μ_d = 0 (No difference in mean impurities between agents)<br>
+                            H₁: μ_d ≠ 0 (Difference in mean impurities between agents)</p>
+
+                        <p><strong>Step 2: Set Decision Criteria</strong><br>
+                            α = 0.05</p>
+
+                        <p><strong>Step 3: Compute Test Statistic</strong><br>
+                            Paired differences (Agent1 - Agent2): <br>
+                            Mean difference: -0.408 <br>
+                            SD of differences: 0.447 <br>
+                            t-statistic = -3.164 <br>
+                            df = 11 <br>
+                            p-value (two-tail) = 0.009 <br>
+
+
+
+
+                        <p><strong>Step 4: Make Decision</strong><br>
+                            Since p-value (0.009) < α (0.05), we REJECT the null hypothesis. There is a significant
+                                difference in impurity levels between the two filtration agents. Agent 1 shows lower
+                                impurity levels than Agent 2. </p>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>Exercise 5</strong>
+                    <div class="actions">
+                        <a href="rmpp/exercises/EX 9.5.xlsx" download class="button">Download</a>
+                        <button class="button secondary" onclick="openModal('answer5')">Answer</button>
+                    </div>
+                </li>
+
+                <!-- Modal -->
+                <div id="answer5" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('answer5')">&times;</span>
+                        <h3>Exercise 5 – Answer</h3>
+                        <p><strong>Step 1: State the Hypotheses</strong><br>
+                            H₀: μ_M = μ_F (Mean income is the same for males and females)<br>
+                            H₁: μ_M ≠ μ_F (Mean income differs between males and females)</p>
+
+                        <p><strong>Step 2: Set Decision Criteria</strong><br>
+                            α = 0.05</p>
+
+                        <p><strong>Step 3: Compute Test Statistic</strong><br>
+                            From the data: <br>
+                            Male: n=60, Mean=52.383, SD=14.892 <br>
+                            Female: n=60, Mean=44.695, SD=14.218 <br>
+                            Using Excel's Data Analysis t-Test: Two-Sample Assuming Unequal Variances: <br>
+                            t-statistic = 2.941 <br>
+                            df = 117 <br>
+                            p-value = 0.004 <br>
+
+
+
+
+
+                        <p><strong>Step 4: Make Decision</strong><br>
+                            Since p-value (0.004) < α (0.05), we REJECT the null hypothesis. There is strong evidence
+                                that mean income differs significantly between male and female cardholders. Males have
+                                higher average income (£52,383) compared to females (£44,695). </p>
+                    </div>
+                </div>
+
+
+
+
+                <li>
+                    <strong>Literature Review — The Impact of LLMs in E-Business</strong>
+                    <div class="actions">
+                        <a href="rmpp/The_Impact_of_LLMs_in_E-Business.pdf" download class="button">Download</a>
+                        <a href="rmpp/preview/literature.html" class="button secondary">Preview</a>
+                    </div>
+                </li>
+
+                <li>
+                    <strong>Research Proposal — Zahra B</strong>
+                    <div class="actions">
+                        <a href="rmpp/Research Proposal - Zahra B.pdf" download class="button">Download PDF</a>
+                        <a href="rmpp/Research Proposal - Presentation - Zahra B.pptx" download class="button">Download
+                            PPT</a>
+                        <a href="rmpp/preview/proposal.html" class="button secondary">Preview</a>
+                    </div>
+                </li>
+
+                <li>
+                    <strong>Reflection — End of Module</strong>
+                    <div class="actions">
+                        <a href="rmpp/reflection.pdf" download class="button">Download</a>
+                        <a href="rmpp/preview/reflection.html" class="button secondary">Preview</a>
+                    </div>
                 </li>
             </ul>
 
-            <p style="margin-top:18px"><a class="button" href="#/academia">Back to Academia</a></p>
+            <p><a class="button" href="#/academia">Back to Academia</a></p>
         </section>
     </main>
 
@@ -235,6 +490,42 @@
             if (branch) document.getElementById("branchName").textContent = branch;
             router();
         });
+
+        window.addEventListener("scroll", () => {
+            const sections = document.querySelectorAll("#rmpp .rmpp-content h3[id]");
+            const navLinks = document.querySelectorAll("#rmpp-nav a");
+
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (e) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (e.target === modal) modal.style.display = "none";
+            });
+        }
     </script>
 </body>
 

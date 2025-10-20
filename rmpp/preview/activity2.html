@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflective Activity 2 — Case Study: Inappropriate Use of Surveys</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #222;
+        }
+
+        header {
+            background: #005f73;
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            margin: 60px auto;
+            background: white;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #005f73;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            color: #0a9396;
+            border-bottom: 2px solid #94d2bd;
+            padding-bottom: 0.3em;
+        }
+
+        /* --- NAVIGATOR STYLING --- */
+        .navigator {
+            position: fixed;
+            top: 0;
+            right: -230px;
+            height: 100vh;
+            width: 200px;
+            background: #ffffff;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+            padding: 1.5em 1em;
+            border-radius: 12px 0 0 12px;
+            transition: right 0.4s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .navigator.open {
+            right: 0;
+        }
+
+        .navigator strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #005f73;
+        }
+
+        .navigator a {
+            display: block;
+            color: #005f73;
+            text-decoration: none;
+            padding: 6px 0;
+            transition: 0.2s;
+        }
+
+        .navigator a:hover {
+            color: #0a9396;
+            text-decoration: underline;
+        }
+
+        /* --- TOGGLE BUTTON --- */
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #005f73;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+
+        .nav-toggle:hover {
+            background: #0a9396;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 2em;
+            background: #005f73;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0a9396;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Reflective Activity 2</h1>
+        <p>Case Study - Inappropriate Use of Surveys: Cambridge Analytica (2018)</p>
+    </header>
+
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <div class="navigator" id="navigator">
+        <strong>Jump to Section</strong>
+        <a href="#overview">Overview</a>
+        <a href="#happened">What Happened</a>
+        <a href="#used">Why It Was Used</a>
+        <a href="#ethics">Ethical & Social Implications</a>
+        <a href="#legal">Legal & Regulatory Impact</a>
+        <a href="#responsibility">Professional Responsibilities</a>
+        <a href="#lessons">Lessons Learned</a>
+        <a href="#conclusion">Conclusion</a>
+    </div>
+
+    <div class="container">
+        <section id="overview">
+            <h2>1. Overview</h2>
+            <p>
+                The Cambridge Analytica scandal (Confessore, New York Times, 2018) represents one of the clearest
+                examples of surveys being used for purposes far beyond the participants’ understanding. What appeared to
+                be an innocent Facebook personality quiz became a large-scale data-harvesting operation that influenced
+                political campaigns across the United States and the United Kingdom.
+            </p>
+        </section>
+
+        <section id="happened">
+            <h2>2. What Actually Happened</h2>
+            <p>
+                A Cambridge academic, Dr. Aleksandr Kogan, created a Facebook app called <em>This Is Your Digital
+                    Life</em>. Around 270,000 users were paid to complete a psychological survey linked to their
+                Facebook accounts. Because of Facebook’s API design at that time, the app also accessed information
+                about each participant’s friends, names, Likes, locations, and other personal details—resulting in data
+                from up to 87 million people being collected without consent.
+            </p>
+            <p>
+                The data were sold to Cambridge Analytica, a political consulting firm that used it to build
+                psychographic profiles for targeted political advertising during the 2016 US Presidential Election and
+                the UK Brexit referendum.
+            </p>
+        </section>
+
+        <section id="used">
+            <h2>3. Why It Was Used</h2>
+            <p>
+                Surveys provide structured, interpretable features—such as personality traits and attitudes—that can
+                feed predictive models. By linking survey results to Facebook Likes and metadata, Cambridge Analytica
+                could infer users’ openness, extroversion, or political leaning, enabling precise behavioural
+                advertising.
+            </p>
+        </section>
+
+        <section id="ethics">
+            <h2>4. Ethical and Social Implications</h2>
+            <table>
+                <tr>
+                    <th>Perspective</th>
+                    <th>Key Issues</th>
+                    <th>Discussion</th>
+                </tr>
+                <tr>
+                    <td>Ethical</td>
+                    <td>Informed consent violated</td>
+                    <td>Only direct participants consented; their friends did not. Consent was deceptive, as users were
+                        told the data were for “academic research.”</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Purpose limitation ignored</td>
+                    <td>Data collected for research were sold for political marketing—classic function creep.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Respect for autonomy undermined</td>
+                    <td>People were profiled and targeted without knowledge or control.</td>
+                </tr>
+                <tr>
+                    <td>Social</td>
+                    <td>Manipulation and mistrust</td>
+                    <td>Psychographic targeting reinforced polarisation and eroded public trust in social media and
+                        research surveys.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Erosion of privacy norms</td>
+                    <td>Users realised that ordinary online quizzes could expose sensitive psychological information.
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="legal">
+            <h2>5. Legal and Regulatory Impact</h2>
+            <ul>
+                <li>Facebook was fined $5 billion (FTC, 2019) in the US for deceptive privacy practices.</li>
+                <li>The UK Information Commissioner’s Office imposed a £500,000 fine under the pre-GDPR Data Protection
+                    Act 1998.</li>
+                <li>Under GDPR (Article 5), such behaviour breaches principles of lawfulness, fairness, transparency,
+                    and purpose limitation.</li>
+            </ul>
+            <p>These enforcement actions marked a turning point in global data-protection awareness.</p>
+        </section>
+
+        <section id="responsibility">
+            <h2>6. Professional Responsibilities of Data Scientists</h2>
+            <ul>
+                <li>Respect privacy and obtain valid, informed consent.</li>
+                <li>Avoid deception and secondary use of data without permission.</li>
+                <li>Ensure transparency of purpose and processing.</li>
+                <li>Prioritise the public good over organisational gain.</li>
+            </ul>
+            <p>
+                The Cambridge Analytica case shows what happens when these duties are ignored: trust collapses,
+                reputations are destroyed, and entire platforms face regulatory scrutiny.
+            </p>
+        </section>
+
+        <section id="lessons">
+            <h2>7. Lessons Learned</h2>
+            <ol>
+                <li>Never disguise data-collection intent.</li>
+                <li>Minimise data; never collect information about third parties without consent.</li>
+                <li>Separate research from marketing—repurposing requires renewed consent.</li>
+                <li>Embed ethical review for every survey-based project.</li>
+            </ol>
+        </section>
+
+        <section id="conclusion">
+            <h2>8. Conclusion</h2>
+            <p>
+                Cambridge Analytica transformed a simple survey into a political-profiling machine. It demonstrates how
+                weak consent, unclear purpose, and profit motives can turn legitimate research into manipulation. For
+                data scientists, responsible data handling is not optional—it is foundational to trustworthy analytics
+                and sustainable public confidence.
+            </p>
+        </section>
+
+        <section>
+            <h2>References</h2>
+            <ul>
+                <li>Association for Computing Machinery (2018). <em>ACM Code of Ethics and Professional Conduct.</em>
+                </li>
+                <li>British Computer Society (BCS). <em>Code of Conduct.</em></li>
+                <li>Confessore, N. (2018). <em>Cambridge Analytica and Facebook: The scandal and the fallout.</em> New
+                    York Times.</li>
+                <li>European Union (2016). <em>General Data Protection Regulation (GDPR), Article 5.</em></li>
+                <li>Federal Trade Commission (2019). <em>FTC Imposes $5 Billion Penalty and Sweeping Privacy
+                        Restrictions on Facebook.</em></li>
+                <li>UK Information Commissioner’s Office (2018). <em>Facebook fined £500,000 for data breaches in
+                        Cambridge Analytica investigation.</em></li>
+            </ul>
+        </section>
+
+        <a href="../../index.html#/rmpp" class="back-btn">← Back to RMPP</a>
+    </div>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navigatorPanel = document.getElementById('navigator');
+
+        navToggle.addEventListener('click', () => {
+            navigatorPanel.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

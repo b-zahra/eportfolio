@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Proposal: Responsible Adoption of LLMs in E-business</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #222;
+        }
+
+        header {
+            background: #005f73;
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            margin: 60px auto;
+            background: white;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #005f73;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            color: #0a9396;
+            border-bottom: 2px solid #94d2bd;
+            padding-bottom: 0.3em;
+        }
+
+        h3 {
+            color: #005f73;
+            margin-top: 1.5em;
+        }
+
+        /* --- NAVIGATOR STYLING --- */
+        .navigator {
+            position: fixed;
+            top: 0;
+            right: -230px;
+            height: 100vh;
+            width: 200px;
+            background: #ffffff;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+            padding: 1.5em 1em;
+            border-radius: 12px 0 0 12px;
+            transition: right 0.4s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .navigator.open {
+            right: 0;
+        }
+
+        .navigator strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #005f73;
+        }
+
+        .navigator a {
+            display: block;
+            color: #005f73;
+            text-decoration: none;
+            padding: 6px 0;
+            transition: 0.2s;
+        }
+
+        .navigator a:hover {
+            color: #0a9396;
+            text-decoration: underline;
+        }
+
+        /* --- TOGGLE BUTTON --- */
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #005f73;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+
+        .nav-toggle:hover {
+            background: #0a9396;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 2em;
+            background: #005f73;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0a9396;
+        }
+
+        .author-info {
+            text-align: center;
+            margin-bottom: 2em;
+            color: #555;
+        }
+
+        .abstract-box {
+            background: #f0f8ff;
+            border-left: 4px solid #0a9396;
+            padding: 1em;
+            margin: 1.5em 0;
+        }
+
+        .keywords {
+            font-style: italic;
+            margin-top: 1em;
+        }
+
+        ol.objectives {
+            padding-left: 1.5em;
+        }
+
+        ol.objectives li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Research Proposal</h1>
+        <p>Responsible Adoption of LLMs in E-business: Balancing Business Value and Governance</p>
+        <p>Zahra Ballaith | Student ID: 28241</p>
+    </header>
+
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <div class="navigator" id="navigator">
+        <strong>Jump to Section</strong>
+        <a href="#abstract">Abstract</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#research-question">Research Question, Aim and Objectives</a>
+        <a href="#literature">Literature Review Summary</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#ethics">Ethical Considerations</a>
+        <a href="#contribution">Expected Contribution & Significance</a>
+        <a href="#timeline">Timeline and Project Plan</a>
+        <a href="#limitations">Limitations</a>
+        <a href="#conclusion">Conclusion</a>
+        <a href="#references">References</a>
+    </div>
+
+    <div class="container">
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <div class="abstract-box">
+                <p>
+                    The rapid integration of Large Language Models (LLMs) into e-business presents a critical tension:
+                    the
+                    pursuit of transformative business value against the imperative for robust governance. This research
+                    proposal
+                    investigates the responsible adoption of LLMs, specifically examining how e-businesses can
+                    strategically balance
+                    the drivers of innovation, such as operational efficiency, hyper-personalisation, and scalability,
+                    with the stringent
+                    demands of ethical accountability, compliance, and social trust. Moving beyond a descriptive survey
+                    of benefits
+                    and risks, the study employs a critical synthesis of existing literature, revealing significant
+                    contradictions in
+                    empirical findings and a pronounced gap between theoretical governance frameworks and their
+                    practical
+                    implementation. The central research question asks: What strategies and frameworks can enable
+                    e-businesses to
+                    reconcile LLM-driven value creation with the mitigation of governance risks related to bias,
+                    privacy, and
+                    explainability?
+                </p>
+                <p>
+                    An exploratory qualitative methodology is proposed, comprising a focused systematic review of
+                    academic
+                    and industry literature, complemented by comparative case studies of leading e-commerce firms and
+                    semi-
+                    structured interviews with industry practitioners. Thematic analysis will be used to map the complex
+                    interplay
+                    between business objectives and governance mechanisms across key domains, including customer
+                    service,
+                    personalisation, and internal compliance. The primary expected contribution is a novel,
+                    evidence-based
+                    framework that explicitly links business Key Performance Indicators (KPIs) to specific governance
+                    safeguards,
+                    offering actionable guidance for managers and policymakers. This research aims to fill a critical
+                    gap in the
+                    literature by moving from identifying trade-offs to providing a structured approach for their
+                    resolution in practice.
+                </p>
+                <p class="keywords">
+                    <strong>Keywords:</strong> Large Language Models; E-Business; Responsible AI; AI Governance;
+                    Business Value; Ethics;
+                    Personalisation.
+                </p>
+            </div>
+        </section>
+
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>
+                The contemporary e-business landscape is undergoing a paradigm shift, driven by the emergence of Large
+                Language Models (LLMs) such as GPT-4, PaLM, and LLaMA. These models are not merely incremental
+                improvements but foundational technologies that redefine core digital capabilities, enabling
+                sophisticated natural
+                language understanding, dynamic conversational interfaces, and the automated generation of complex
+                content
+                (Brown et al., 2020; OpenAI, 2023; Touvron et al., 2023). For e-business, this technological leap
+                promises
+                transformative gains in operational domains such as customer service automation, hyper-personalised
+                marketing,
+                and data-driven decision support, potentially unlocking unprecedented scalability and efficiency.
+            </p>
+            <p>
+                However, the scholarly and practitioner literature reveals a stark and unresolved contradiction. A body
+                of
+                empirical work documents significant, quantifiable business benefits, including increased conversion
+                rates,
+                reduced operational costs, and enhanced customer satisfaction in retail and service contexts (e.g.,
+                Smith & Yang,
+                2023). Conversely, a parallel and critical stream of research highlights profound governance challenges,
+                including
+                algorithmic bias, data privacy violations, a lack of explainability, and potential workforce disruption,
+                with these
+                risks being particularly acute in regulated sectors like finance and healthcare (Zhang et al., 2019; Ji
+                et al., 2023;
+                Leslie, 2020). This divergence points to a fundamental schism: the discourse on technological innovation
+                often
+                proceeds in isolation from the discourse on ethical and responsible implementation.
+            </p>
+            <p>
+                This research proposal, therefore, frames the adoption of LLMs not merely as a technical or strategic
+                challenge, but as a critical balancing problem. The central inquiry is: how can e-business firms
+                proactively capture
+                the substantial business value offered by LLMs while simultaneously designing and implementing robust
+                governance mechanisms that mitigate associated ethical, legal, and operational risks? To address this,
+                the study
+                adopts a deliberate analytical framing: it positions business value (encompassing efficiency,
+                personalisation, and
+                scalability) as the primary driver of adoption, while treating governance and ethics not as peripheral
+                concerns,
+                but as the essential boundary conditions that determine whether the created value is sustainable,
+                legitimate, and
+                resilient. By critically synthesising existing evidence, comparing sectoral experiences, and engaging
+                with
+                practitioner insights, this research aims to develop a pragmatic framework that moves beyond identifying
+                trade-
+                offs to providing a structured pathway for the responsible adoption of LLMs in e-business.
+            </p>
+        </section>
+
+        <section id="research-question">
+            <h2>2. Research Question, Aim and Objectives</h2>
+
+            <h3>Research Question</h3>
+            <p>
+                How can e-businesses responsibly adopt Large Language Models in ways that maximise business value while
+                ensuring governance, ethical compliance and customer trust?
+            </p>
+
+            <h3>Aim</h3>
+            <p>
+                The primary aim of this research is to develop and propose a novel, evidence-based framework that
+                enables e-
+                businesses to navigate the complex trade-offs inherent in LLM adoption. This will be achieved by
+                critically
+                evaluating existing adoption strategies to elucidate the conditions under which business value and
+                robust
+                governance can be synergistically balanced, rather than viewed as a zero-sum game.
+            </p>
+
+            <h3>Objectives</h3>
+            <ol class="objectives">
+                <li>Analyse business value mechanisms enabled by LLMs in customer service and personalization.</li>
+                <li>Identify governance, ethical and regulatory risks in these application areas.</li>
+                <li>Compare contradictory empirical findings and sectoral outcomes (retail vs. healthcare/finance).</li>
+                <li>Develop and validate a conceptual framework for responsible LLM adoption.</li>
+                <li>Provide actionable recommendations for practitioners and policymakers.</li>
+            </ol>
+        </section>
+
+        <section id="literature">
+            <h2>3. Literature Review Summary</h2>
+            <p>
+                Recent research situates LLMs as powerful enablers of automated dialogue, content generation, and
+                context-
+                aware recommendations in e-business (Brown et al., 2020; Zhang et al., 2019). Empirical studies in
+                retail report
+                increases in conversion rates, faster response times, and improved customer satisfaction from LLM-driven
+                personalization and chatbots (Yang et al., 2023). Similarly, LLMs have been reported to speed up
+                managerial
+                tasks, summarising reports and extracting insights (Bommasani et al., 2021).
+            </p>
+            <p>
+                Nonetheless, an emergent corpus of literature emphasises the governance risks of these systems.
+                Hallucinations (spurious outputs), representational bias, and data-privacy challenges can undermine
+                trust and lead
+                to regulatory exposure (Ji et al., 2023; Bender et al., 2021). High-stakes sectors demonstrate this
+                tension: while
+                LLM-assisted fraud detection improves throughput in some studies (Liu et al., 2023), others document
+                false
+                positives and compliance headaches (Ji et al., 2023). Similarly, retail benefits contrast with
+                healthcare risks where
+                incorrect advice could cause harm (Leslie, 2020).
+            </p>
+            <p>
+                These contradictions partly reflect methodological differences (technical benchmarks vs. field studies),
+                divergent outcome metrics (conversion vs. compliance), and sectoral tolerance for error. Key gaps
+                remain: limited
+                cross-industry comparative evidence, few studies linking governance interventions directly to business
+                KPIs, and
+                a shortage of tested frameworks for responsible adoption. For methodological rigour this proposal
+                excludes non-
+                peer reviewed opinion pieces and technical benchmark papers that do not engage with e-business outcomes,
+                focusing instead on peer-reviewed empirical or mixed-method studies (Tranfield et al., 2003).
+            </p>
+        </section>
+
+        <section id="methodology">
+            <h2>4. Methodology</h2>
+
+            <h3>Research Approach</h3>
+            <p>
+                This study adopts an exploratory qualitative research design, justified by the nascent and complex
+                nature of
+                responsible LLM adoption. A mono-method quantitative approach is deemed insufficient to capture the
+                nuanced,
+                contextual, and often subjective trade-offs between business value and governance. Therefore, a
+                multi-method
+                qualitative approach is proposed, integrating a focused systematic review with comparative case
+                studies and semi-structured interviews. This design is strategically chosen to triangulate data from
+                three distinct
+                sources: the documented academic and industry literature, real-world organisational contexts, and the
+                lived
+                experiences of practitioners. This triangulation is essential for developing a robust, evidence-based
+                understanding
+                that is both theoretically informed and pragmatically grounded.
+            </p>
+
+            <h3>Systematic Review Component</h3>
+            <p>
+                A focused systematic review will establish the foundational landscape of evidence and identify the
+                central
+                contradictions in the literature. The search will be conducted across major bibliographic databases
+                (Scopus, Web
+                of Science, ACM Digital Library, IEEE Xplore) supplemented by Google Scholar for grey literature.
+                Controlled
+                search strings will combine terms related to the technology ("Large Language Model*", "Generative AI"),
+                the
+                domain ("E-Business", "E-Commerce", "digital business"), and the core concepts ("governance", "ethics",
+                "business value", "adoption"). Inclusion criteria will prioritise peer-reviewed articles and reputable
+                industry
+                reports (2018–2025) that explicitly link LLM technology to business or governance outcomes. A critical
+                exclusion
+                criterion will be the omission of purely technical NLP papers that lack a business or organisational
+                context, as
+                well as non-evidenced opinion pieces. (see Appendix A: search log).
+            </p>
+
+            <h3>Case Studies and Sampling</h3>
+            <p>
+                To move from theoretical concepts to practical realities, a comparative case study approach will be
+                employed.
+                Three sectors will be purposively selected to represent a spectrum of risk-value profiles: retail
+                e-commerce (high
+                commercial value, lower regulatory immediacy), financial services e-business (high value, high
+                regulatory
+                scrutiny), and digital healthcare services (high-stakes outcomes, stringent ethical and compliance
+                demands).
+                Within each sector, the study will seek access to 2–3 organisations, or, where primary access is
+                constrained, will
+                analyse in-depth, documented case reports from reputable sources. This strategy ensures that the
+                research can
+                capture sector-specific nuances in how the value-governance balance is negotiated.
+            </p>
+
+            <h3>Data Collection Instruments</h3>
+            <p>
+                Primary data will be collected through 8–12 semi-structured interviews with key practitioners involved
+                in
+                LLM adoption, including product managers, AI ethics leads, and compliance officers. Purposive sampling
+                will
+                ensure participants have direct, hands-on experience with LLM deployment projects. An interview protocol
+                of 8–
+                10 open-ended questions (Appendix B) will guide the conversations, exploring themes such as perceived
+                value
+                drivers, risk prioritisation, implementation challenges, and existing governance frameworks. This
+                semi-structured
+                format allows for both consistency across interviews and the flexibility to probe emergent,
+                unanticipated themes.
+            </p>
+
+            <h3>Data Analysis</h3>
+            <p>
+                The analysis will follow a rigorous thematic analysis procedure (Braun & Clarke, 2006), facilitated by
+                NVivo
+                software. The process will be iterative, employing both inductive and deductive coding. Initially, open
+                coding
+                will be applied to interview transcripts and case documents to identify emergent themes related to
+                benefits and
+                risks. Subsequently, axial coding will be used to map relationships between these themes, specifically
+                focusing
+                on how identified governance mechanisms (e.g., model audits, data anonymisation) link to specific
+                business
+                outcomes and risks. Finally, a cross-case synthesis will be conducted to compare patterns,
+                contradictions, and
+                successful balancing strategies across the three sectors, directly addressing Research Objective 3.
+            </p>
+
+            <h3>Ensuring Rigor and Trustworthiness</h3>
+            <p>
+                To ensure the study's trustworthiness, several strategies will be implemented: triangulation of data
+                from
+                literature, cases, and interviews; member checking, where participants will review summaries of their
+                contributions for accuracy; maintaining a detailed audit trail of all analytical decisions; and
+                reflexive
+                journaling to acknowledge and mitigate researcher bias. These measures enhance the credibility,
+                dependability,
+                and confirmability of the findings.
+            </p>
+
+            <h3>Limitations</h3>
+            <p>
+                The primary limitations of this methodology are its limited generaliability due to the purposive,
+                qualitative
+                sampling strategy, and potential access constraints to sensitive proprietary data. These limitations
+                will be
+                mitigated through the explicit triangulation of data sources and the strategic selection of
+                information-rich cases
+                that provide deep insights, even if they are not statistically representative. The goal is analytical
+                generalization to
+                theory, rather than statistical generalisation to a population.
+            </p>
+        </section>
+
+        <section id="ethics">
+            <h2>5. Ethical Considerations</h2>
+            <p>
+                The study involves secondary literature and primary interview data. Ethical considerations include
+                informed
+                consent, confidentiality and secure storage. Participants will receive an information sheet and sign
+                consent forms;
+                interviews will be recorded only with permission and transcripts anonymised. Data will be stored on
+                password-
+                protected drives and retained in accordance with institutional policies and GDPR. There is a small risk
+                of
+                organisational reputational harm if sensitive information is disclosed; to mitigate this, all case
+                descriptions will
+                be non-identifying and vetted with participants. The research will submit an ethical approval
+                application to the
+                university ethics board prior to data collection, detailing data management, consent procedures and risk
+                mitigation.
+            </p>
+        </section>
+
+        <section id="contribution">
+            <h2>6. Expected Contribution & Significance</h2>
+
+            <h3>Principal Research Artefact: The Balanced Adoption Framework</h3>
+            <p>
+                The primary output of this research will be an evidence-based conceptual framework, tentatively titled
+                the "Balanced Adoption Framework for LLMs in E-Business." This artefact is designed to directly address
+                the core research problem by moving from abstract principles to actionable strategy. It will not be a
+                mere
+                taxonomy of risks and benefits, but a dynamic mapping that connects specific LLM use-cases (e.g.,
+                automated
+                customer service, dynamic content personalisation) to two critical dimensions:
+            </p>
+            <ol>
+                <li><strong>Business Value Drivers:</strong> Explicitly linking applications to relevant Key Performance
+                    Indicators (KPIs)
+                    such as cost-to-serve reduction, conversion rate uplift, and customer satisfaction (CSAT) scores.
+                </li>
+                <li><strong>Governance Control Mechanisms:</strong> Prescribing a suite of corresponding governance and
+                    technical
+                    controls, such as the integration of Explainable AI (XAI) for auditability, human-in-the-loop
+                    protocols
+                    for high-stakes decisions, rigorous bias testing regimes, and data anonymisation techniques.</li>
+            </ol>
+            <p>
+                To ensure immediate practical utility, the framework will be operationalised through a supplementary
+                practitioner toolkit. This will include a diagnostic checklist for project scoping and a set of
+                suggested metrics for
+                ongoing monitoring, such as accuracy thresholds, fairness benchmarks, auditing cadence, and specific
+                data
+                governance steps.
+            </p>
+
+            <h3>Academic Contribution</h3>
+            <p>
+                This research will make a significant academic contribution by bridging the distinct scholarly
+                discourses of
+                business information systems and critical AI ethics. Currently, these literatures often run in parallel:
+                one
+                champions technological innovation and value creation, while the other highlights ethical perils. This
+                study will
+                synthesise these perspectives into a unified model, demonstrating that governance is not an impediment
+                to value
+                but a constitutive element of its sustainability. The resulting framework will offer a novel theoretical
+                lens for
+                understanding technology adoption in contexts of significant ethical uncertainty.
+            </p>
+
+            <h3>Practical Significance</h3>
+            <p>
+                The practical significance is twofold. For e-business managers and product leaders, the framework
+                provides
+                a much-needed strategic tool to de-risk LLM projects, justify governance investments to stakeholders,
+                and build
+                trustworthy AI systems that protect brand reputation. For policymakers and regulators, the findings will
+                offer
+                granular, evidence-based insights into the real-world challenges and effective practices of LLM
+                governance,
+                informing the development of more nuanced and effective regulations that foster innovation while
+                protecting
+                public interest.
+            </p>
+        </section>
+
+        <section id="timeline">
+            <h2>7. Timeline and Project Plan</h2>
+            <p>
+                The project will be executed over a 12-week period, following a sequential and iterative workflow
+                designed
+                to ensure each phase logically informs the next. The timeline is visualized in the Gantt chart below,
+                followed by
+                a detailed breakdown of key activities.
+            </p>
+            <img src="p01.png" alt="" style="width: 60%; display: block; margin: auto;">
+        </section>
+
+        <section id="limitations">
+            <h2>8. Limitations</h2>
+            <p>
+                A rigorous research design necessitates the explicit acknowledgement of its inherent limitations. This
+                study
+                is consciously bounded by several factors, which are recognised and addressed through specific
+                methodological
+                strategies.
+            </p>
+            <p>
+                First, the qualitative, purposive sampling strategy for case studies and interviews inherently
+                prioritises depth
+                of insight over breadth, meaning the findings will not be statistically generalisable to the entire
+                population of e-
+                businesses. This is a recognised trade-off in exploratory research. However, this limitation is
+                mitigated by the
+                principle of analytical generalisation (Yin, 2018). The goal is not to predict outcomes for all firms,
+                but to develop
+                a conceptual framework and generate insights that can be transferred to similar theoretical contexts.
+                The
+                triangulation of data across multiple sectors and sources further strengthens the analytical robustness
+                of the
+                conclusions.
+            </p>
+            <p>
+                Second, potential organisational access constraints may limit the availability of sensitive, proprietary
+                data,
+                such as detailed internal KPIs or confidential audit reports. While this may restrict the quantitative
+                validation of
+                business value claims, the study is designed to navigate this by focusing on qualitative evidence of
+                value and
+                governance mechanisms, such as practitioner perceptions, documented processes, and implementation
+                challenges,
+                which are often more revealing of the underlying strategic tensions. Additionally, there is potential
+                for researcher
+                bias given my dual role as both analyst and interpreter of findings. This will be mitigated by
+                maintaining
+                reflexivity, keeping an audit trail of decisions, and where possible, triangulating interpretations with
+                external
+                feedback.
+            </p>
+            <p>
+                Finally, the field of LLMs is characterised by extreme technological velocity, where specific model
+                architectures and capabilities can become rapidly outdated. To address this, the research deliberately
+                focuses on
+                higher-level governance principles and business processes (e.g., the need for explainability, audit
+                trails, and
+                human oversight) that are applicable across model generations, rather than on the technical specifics of
+                any single,
+                transient LLM version. The proposed framework is therefore designed for adaptability, providing a
+                structural
+                approach to responsible adoption that remains relevant amidst technological change.
+            </p>
+        </section>
+
+        <section id="conclusion">
+            <h2>9. Conclusion</h2>
+            <p>
+                The integration of Large Language Models into e-business represents a frontier of both immense
+                opportunity
+                and significant risk. This research proposal has articulated the critical tension at the heart of this
+                adoption: the
+                compelling drive for business value against the non-negotiable imperative for robust governance. Current
+                literature often treats these as separate concerns, leading to a gap between strategic ambition and
+                sustainable,
+                ethical implementation.
+            </p>
+            <p>
+                This study is designed to bridge that gap. By critically synthesising disparate strands of evidence and
+                engaging directly with the realities of practitioner experience, the research will move beyond simply
+                identifying
+                trade-offs to providing a structured pathway for their resolution. The proposed "Balanced Adoption
+                Framework"
+                is conceived as the central contribution—a pragmatic tool that explicitly connects LLM applications to
+                business
+                KPIs and governance controls, thereby making responsibility actionable.
+            </p>
+            <p>
+                The significance of this work is twofold. Academically, it seeks to advance the discourse by integrating
+                the
+                often-siloed perspectives of business information systems and AI ethics, offering a more holistic
+                understanding
+                of technology adoption. Practically, it provides managers with a evidence-based guide for de-risking
+                innovation
+                and offers policymakers nuanced insights into effective governance. In conclusion, this project contends
+                that the
+                long-term value of LLMs in e-business is contingent not on the unchecked pursuit of innovation, but on a
+                deliberate and scholarly-informed balance between value creation and accountable governance. The
+                proposed
+                methodology offers a robust plan to investigate and articulate what that balance entails.
+            </p>
+        </section>
+
+        <section id="references">
+            <h2>10. References</h2>
+            <ul>
+                <li>Bender, E., Gebru, T., McMillan-Major, A. and Shmitchell, S. (2021). On the Dangers of Stochastic
+                    Parrots: Can Language Models Be Too Big? Proceedings of FAccT '21. ACM.</li>
+                <li>Bommasani, R., Hudson, D.A., Adeli, E., et al. (2021). On the Opportunities and Risks of Foundation
+                    Models. arXiv preprint.</li>
+                <li>Braun, V. and Clarke, V. (2006). Using thematic analysis in psychology. Qualitative Research in
+                    Psychology, 3(2), pp.77–101.</li>
+                <li>Brown, T.B., Mann, B., Ryder, N., et al. (2020). Language Models are Few-Shot Learners. NeurIPS.
+                </li>
+                <li>Dwivedi, Y.K. et al. (2023). Generative AI for Business: Opportunities, Risks, and Policy
+                    Implications.
+                    International Journal of Information Management.</li>
+                <li>Floridi, L., & Cowls, J. (2022). A Unified Framework for AI Governance. AI & Society.</li>
+                <li>Ji, Z., Lee, N., Frieske, R., et al. (2023). Survey of Hallucination in Natural Language Generation.
+                    ACM
+                    Computing Surveys.</li>
+                <li>Leslie, D. (2020). Understanding artificial intelligence ethics and safety. UK: Alan Turing
+                    Institute.</li>
+                <li>Liu, Y., Xu, B., Zhang, X. and Zhang, W. (2023). Large Language Models in Fraud Detection. Journal
+                    of Financial Technology, 7(2), pp.33–49.</li>
+                <li>OpenAI (2023). GPT-4 Technical Report. arXiv preprint.</li>
+                <li>Tranfield, D., Denyer, D. and Smart, P. (2003). Towards a Methodology for Developing Evidence-
+                    Informed Management Knowledge by Means of Systematic Review. British Journal of Management,
+                    14(3), pp.207–222.</li>
+                <li>Touvron, H., Lavril, T., Izacard, G., et al. (2023). LLaMA: Open and Efficient Foundation Language
+                    Models. arXiv preprint.</li>
+                <li>Rai, A., Constantinides, P., & Sarker, S. (2019/2023). Responsible AI for Digital Business. MIS
+                    Quarterly.</li>
+                <li>Yang, X., Chen, Y. and Wei, L. (2023). Generative AI in E-Commerce: Impacts on Customer
+                    Satisfaction and Sales Conversion. Journal of Retail Technology, 19(4), pp.102–119.</li>
+                <li>Zhang, Z., Yang, H. and Xu, X. (2019). Artificial Intelligence in E-Business: Value Creation
+                    Mechanisms. International Journal of Electronic Commerce, 23(2), pp.161–195.</li>
+            </ul>
+        </section>
+
+        <a href="../../index.html#/rmpp" class="back-btn">← Back to RMPP</a>
+    </div>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navigatorPanel = document.getElementById('navigator');
+
+        navToggle.addEventListener('click', () => {
+            navigatorPanel.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

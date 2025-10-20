@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflective Activity 1 — Ethics in Computing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #222;
+        }
+
+        header {
+            background: #005f73;
+            color: white;
+            padding: 1.5em;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            margin: 60px auto;
+            background: white;
+            padding: 2em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #005f73;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            color: #0a9396;
+            border-bottom: 2px solid #94d2bd;
+            padding-bottom: 0.3em;
+        }
+
+        /* --- NAVIGATOR STYLING --- */
+        .navigator {
+            position: fixed;
+            top: 0;
+            right: -230px;
+            height: 100vh;
+            width: 200px;
+            background: #ffffff;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+            padding: 1.5em 1em;
+            border-radius: 12px 0 0 12px;
+            transition: right 0.4s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .navigator.open {
+            right: 0;
+        }
+
+        .navigator strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #005f73;
+        }
+
+        .navigator a {
+            display: block;
+            color: #005f73;
+            text-decoration: none;
+            padding: 6px 0;
+            transition: 0.2s;
+        }
+
+        .navigator a:hover {
+            color: #0a9396;
+            text-decoration: underline;
+        }
+
+        /* --- TOGGLE BUTTON --- */
+        .nav-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #005f73;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+            z-index: 1100;
+        }
+
+        .nav-toggle:hover {
+            background: #0a9396;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 2em;
+            background: #005f73;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #0a9396;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Reflective Activity 1 — Ethics in Computing</h1>
+        <p>Reflection on the Global Governance of Generative Artificial Intelligence</p>
+    </header>
+
+    <button class="nav-toggle" id="navToggle">☰</button>
+
+    <div class="navigator" id="navigator">
+        <strong>Jump to Section</strong>
+        <a href="#introduction">Introduction</a>
+        <a href="#fragmentation">Global Fragmentation</a>
+        <a href="#ethics">Ethical Implications</a>
+        <a href="#legal">Legal & Professional Responsibilities</a>
+        <a href="#comparison">Comparative Analysis</a>
+        <a href="#balanced">Balanced Course of Action</a>
+        <a href="#impact">Impact</a>
+        <a href="#conclusion">Conclusion</a>
+    </div>
+
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                The rise of generative artificial intelligence since late 2022 has been transformative. With the
+                release of models such as GPT-4, PaLM, and LLaMA, AI has entered a new phase where it can generate,
+                reason, and interact in ways resembling human cognition (Brown et al., 2020; OpenAI, 2023; Touvron
+                et al., 2023).
+            </p>
+            <p>
+                While these models have enabled unprecedented innovation, they have also introduced complex ethical
+                and governance challenges. This reflection explores how nations respond to AI governance, the
+                ethical dilemmas involved, and the professional responsibilities of computing practitioners.
+            </p>
+        </section>
+
+        <section id="fragmentation">
+            <h2>Global Fragmentation and the Challenge of Consensus</h2>
+            <p>
+                Global AI governance is fragmented and lacks shared values (Correa et al., 2023). The diversity of
+                political systems and cultural norms prevents the formation of a unified vision of “responsible AI.”
+            </p>
+            <p>
+                For instance, the EU pursues a structured, risk-based approach through the AI Act emphasizing
+                transparency and oversight (Floridi and Cowls, 2022), while the U.S. favors flexibility and
+                innovation-driven self-regulation. This regulatory inconsistency complicates compliance for global
+                developers and undermines user trust.
+            </p>
+        </section>
+
+        <section id="ethics">
+            <h2>Ethical and Social Implications</h2>
+            <p>
+                Generative AI challenges ethical norms in truth, bias, and accountability (Bender et al., 2021;
+                Leslie, 2020). Models often reproduce societal biases, perpetuating inequality in hiring, finance,
+                or healthcare applications. Deckard (2023) warns that AI-driven misinformation could erode public
+                trust and fuel polarization.
+            </p>
+            <p>
+                Additionally, automation reshapes labor markets, displacing roles while creating new ones.
+                Policymakers must prioritize equitable upskilling to ensure inclusion in the digital future.
+            </p>
+        </section>
+
+        <section id="legal">
+            <h2>Legal and Professional Responsibilities</h2>
+            <p>
+                The legal implications of generative AI concern data protection, intellectual property, and
+                liability (Rai et al., 2023). Many models are trained on data that include copyrighted or personal
+                materials, raising issues of consent and privacy under frameworks like the GDPR.
+            </p>
+            <p>
+                Deckard (2023) proposes an “algorithmic fiduciary duty,” suggesting that AI developers should act
+                with a duty of care similar to medical or legal professionals. This includes bias audits,
+                transparent documentation, and risk disclosures—aligning with ACM and IEEE ethical codes.
+            </p>
+        </section>
+
+        <section id="comparison">
+            <h2>Comparative Analysis of National Strategies</h2>
+            <ul>
+                <li><strong>Europe:</strong> Structured and compliance-heavy, prioritizing ethics and accountability
+                    (Floridi & Cowls, 2022).</li>
+                <li><strong>United States:</strong> Flexible and market-driven, promoting innovation but lacking
+                    binding responsibility (Deckard, 2023).</li>
+                <li><strong>Asia & Middle East:</strong> Hybrid frameworks combining investment with principle-based
+                    ethics (Correa et al., 2023).</li>
+            </ul>
+            <p>
+                These differences highlight the need for shared meta-principles—transparency, fairness, and
+                accountability—to support global interoperability in AI governance.
+            </p>
+        </section>
+
+        <section id="balanced">
+            <h2>A Balanced Course of Action</h2>
+            <ol>
+                <li><strong>Global Principles:</strong> Establish international cooperation through UNESCO, OECD, or
+                    ISO for unified AI standards.</li>
+                <li><strong>Organisational Governance:</strong> Embed ethical oversight tools and human-in-the-loop
+                    systems in company practices.</li>
+                <li><strong>Professional Education:</strong> Integrate ethics into computing curricula to ensure
+                    social and moral awareness.</li>
+            </ol>
+            <p>
+                Such integration balances innovation with ethical safeguards, ensuring sustainable technological
+                growth.
+            </p>
+        </section>
+
+        <section id="impact">
+            <h2>Impact on Legal, Social, and Professional Domains</h2>
+            <p>
+                Effective AI governance enhances compliance, strengthens public trust, and elevates professionalism.
+                Transparent systems mitigate misinformation and foster accountability. Ethical integrity becomes a
+                competitive advantage in industries like healthcare, finance, and e-commerce.
+            </p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                Generative AI presents both vast potential and responsibility. As Correa et al. (2023) emphasize,
+                defining shared values is essential for trust and accountability. A balanced approach—combining
+                ethical standards, national regulation, and professional responsibility—ensures AI remains aligned
+                with humanity’s core values of fairness, transparency, and respect.
+            </p>
+        </section>
+
+        <section>
+            <h2>References</h2>
+            <ul>
+                <li>Bender, E., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). <em>On the Dangers of
+                        Stochastic Parrots: Can Language Models Be Too Big?</em> Proceedings of FAccT ’21. ACM.</li>
+                <li>Brown, T.B., Mann, B., Ryder, N., et al. (2020). <em>Language Models are Few-Shot Learners.</em>
+                    NeurIPS.</li>
+                <li>Correa, C., et al. (2023). <em>Global AI Governance and the Challenge of Normative
+                        Consensus.</em> Journal of AI Policy and Ethics.</li>
+                <li>Deckard, T. (2023). <em>The Fiduciary Turn in Generative AI Ethics.</em> AI & Society, 38(4).
+                </li>
+                <li>Dwivedi, Y.K., et al. (2023). <em>Generative AI for Business: Opportunities, Risks, and Policy
+                        Implications.</em> IJIM.</li>
+                <li>Floridi, L. & Cowls, J. (2022). <em>A Unified Framework for AI Governance.</em> AI & Society.
+                </li>
+                <li>Leslie, D. (2020). <em>Understanding Artificial Intelligence Ethics and Safety.</em> Alan Turing
+                    Institute.</li>
+                <li>OpenAI. (2023). <em>GPT-4 Technical Report.</em> arXiv preprint.</li>
+                <li>Rai, A., Constantinides, P., & Sarker, S. (2023). <em>Responsible AI for Digital Business.</em>
+                    MIS Quarterly.</li>
+                <li>Touvron, H., Lavril, T., Izacard, G., et al. (2023). <em>LLaMA: Open and Efficient Foundation
+                        Language Models.</em> arXiv preprint.</li>
+            </ul>
+        </section>
+
+        <a href="../../index.html#/rmpp" class="back-btn">← Back to RMPP</a>
+    </div>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navigatorPanel = document.getElementById('navigator');
+
+        navToggle.addEventListener('click', () => {
+            navigatorPanel.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>
