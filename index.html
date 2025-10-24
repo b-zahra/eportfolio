@@ -170,7 +170,7 @@
                         <ul>
                             <li><a href="#/academia">Academia</a></li>
                             <li><a href="#/rmpp">RMPP Module (public)</a></li>
-                            <li><a href="#/rmpp#reflection">Reflection (PDF)</a></li>
+                            <li><a href="rmpp/preview/reflection.html">My Reflection</a></li>
                         </ul>
                     </div>
                 </aside>
@@ -203,7 +203,7 @@
                         <div class="muted small">Visualising Data</div>
                     </div><span class="badge lock">Private</span>
                 </li>
-                <li style="cursor:pointer" onclick="navigateTo('#rmpp')">
+                <li style="cursor:pointer" onclick="navigateTo('rmpp')">
                     <div><strong>RMPP_PCOM7E</strong>
                         <div class="muted small">Research Methods and Professional Practice</div>
                     </div><span class="badge public">Public</span>
@@ -215,7 +215,7 @@
             <div class="breadcrumbs">Home &gt; Academia &gt; RMPP_PCOM7E</div>
             <h2>RMPP — Research Methods and Professional Practice</h2>
 
-            <ul class="file-list">
+            <ul class="file-list exercises01 exercises">
                 <li>
                     <strong>Reflective Activity 1 — Ethics in Computing </strong>
                     <div class="actions">
@@ -231,8 +231,11 @@
                     </div>
                 </li>
 
+            </ul>
+            <h1>Statistical Exercises</h1>
+            <ul class="file-list exercises">
 
-                <h1>Statistical Exercises</h1>
+
                 <li>
                     <strong>Exercise 1</strong>
                     <div class="actions">
@@ -388,7 +391,7 @@
                                 difference in impurity levels between the two filtration agents. Agent 1 shows lower
                                 impurity levels than Agent 2. </p>
 
-                        <a href="rmpp/exercises/EX 9.6 .xlsx" download class="button"><i>Excel Output</i></a>
+                                <a href="rmpp/exercises/EX 9.6 .xlsx" download class="button"><i>Excel Output</i></a>
 
                     </div>
                 </div>
@@ -432,7 +435,7 @@
 
 
                 <li>
-                    <strong>Exercise 6.1</strong>
+                    <strong>Exercise 6</strong>
                     <div class="actions">
                         <a href="rmpp/exercises/EXE 6.1.xlsx" download class="button">Download</a>
                         <button class="button secondary" onclick="openModal('answer6')">Answer</button>
@@ -443,7 +446,7 @@
                 <div id="answer6" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('answer6')">&times;</span>
-                        <h3>Exercise 6.1 – Answer</h3>
+                        <h3>Exercise 6 – Answer</h3>
                         <p>The results indicate that Diet A was more effective than Diet B for weight loss, on average.
                             <br><br>
                             Individuals following Diet A lost, on average, about 1.63 kg more than those following Diet
@@ -459,7 +462,7 @@
 
 
                 <li>
-                    <strong>Exercise 6.2</strong>
+                    <strong>Exercise 7</strong>
                     <div class="actions">
                         <a href="rmpp/exercises/EXE 6.2.xlsx" download class="button">Download</a>
                         <button class="button secondary" onclick="openModal('answer7')">Answer</button>
@@ -470,7 +473,7 @@
                 <div id="answer7" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('answer7')">&times;</span>
-                        <h3>Exercise 6.2 – Answer</h3>
+                        <h3>Exercise 7 – Answer</h3>
                         <p>
                             <b>Central Tendency (Median):</b> The median weight loss for Diet A (5.642 kg) is
                             substantially
@@ -493,7 +496,7 @@
 
 
                 <li>
-                    <strong>Exercise 6.3</strong>
+                    <strong>Exercise 8</strong>
                     <div class="actions">
                         <a href="rmpp/exercises/EXE 6.3.xlsx" download class="button">Download</a>
                         <button class="button secondary" onclick="openModal('answer8')">Answer</button>
@@ -504,7 +507,7 @@
                 <div id="answer8" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('answer8')">&times;</span>
-                        <h3>Exercise 6.3 – Answer </h3>
+                        <h3>Exercise 8 – Answer </h3>
                         <p>
                             The brand preference differs significantly between the two areas. <br>Area 1's market is
                             fragmented, dominated by a 60% share for "Other" brands. <br>In contrast, Area 2's market is
@@ -515,7 +518,9 @@
                 </div>
 
 
+            </ul>
 
+            <ul class="file-list">
 
                 <li>
                     <strong>Literature Review — The Impact of LLMs in E-Business</strong>
@@ -526,7 +531,7 @@
                 </li>
 
                 <li>
-                    <strong>Research Proposal — Zahra B</strong>
+                    <strong>Resesrch Proposal & Presentation</strong>
                     <div class="actions">
                         <a href="rmpp/Research Proposal - Zahra B.pdf" download class="button">Download PDF</a>
                         <a href="rmpp/Research Proposal - Presentation - Zahra B.pptx" download class="button">Download
@@ -555,7 +560,7 @@
             if (el) el.classList.remove("hidden");
         }
         function navigateTo(path) {
-            window.location.hash = "#" + path.replace(/^\//, "");
+            window.location.hash = "/" + path.replace(/^\//, "");
         }
         function router() {
             const hash = window.location.hash || "#/";

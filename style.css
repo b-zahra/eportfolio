@@ -290,3 +290,15 @@ a.button {
 .button.secondary:hover {
     background: #d1d5db;
 }
+
+.exercises{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px 20px;
+    padding-bottom: 40px;
+    /* max-width: 50%; */
+}
+
+.exercises01{
+    grid-template-columns: 1fr 1fr;
+}
